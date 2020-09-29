@@ -92,6 +92,7 @@ a:visited {
   position: relative;
   font-size: 20px;
   padding: 20px;
+  font-color: white;
 }
 
 .home-link {
