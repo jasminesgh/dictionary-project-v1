@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>FA-EN Dictionary</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/FA-EN-Dictionary.ico">
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="home-title"><a href="#">
+      <h1 class="home-web-name-EN">Persian Dictionary</h1>
+      <h3 class="home-web-name-FA">فرهنگ لغت فارسی</h1>
+    </a></div><div class="alpha-link-container">
+      <a href="alphabet.html" class="alpha-link-index">Persian alphabet page</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search the Persian Dictiionary..." class="search">
+    </div>
+    <ul id="myUL">
+      <li><a href="definitions/def-and.html">and</a></li>
+      <li><a href="definitions/def-ant.html">ant</a></li>
+      <li><a href="definitions/def-bad.html">bad</a></li>
+      <li><a href="definitions/def-big.html">big</a></li>
+      <li><a href="definitions/def-cat.html">cat (only filled out page)</a></li>
+      <li><a href="definitions/def-cheese.html">cheese</a></li>
+      <li><a href="definitions/def-drink.html">drink</a></li>
+      <li><a href="definitions/def-english.html">English</a></li>
+    </ul>
+</body>
+
+</html>
